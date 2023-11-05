@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
 
         //create the vector for movement relative to the camera direction
         move = Camera.main.transform.right * moveX + new Vector3(Camera.main.transform.forward.x, 0f,Camera.main.transform.forward.z) * moveZ;
-        Debug.Log(Camera.main.transform.forward);
+        //Debug.Log(Camera.main.transform.forward);
 
         //normalize so we only have the direction the player wants to move in relative to the camera,
         //this ensures that we don't add up vectors and have magnitues larger than 1 when we press horizontal and vertical movemen

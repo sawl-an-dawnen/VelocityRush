@@ -28,7 +28,7 @@
                 {
                     "name": "",
                     "id": "c418213b-27d3-4f50-9014-ee32d05f1e07",
-                    "path": "<XInputController>/leftStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -39,7 +39,7 @@
                 {
                     "name": "",
                     "id": "dabbf4a0-4dd4-4f5f-9981-1498820d755c",
-                    "path": "<XInputController>/rightStick",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
