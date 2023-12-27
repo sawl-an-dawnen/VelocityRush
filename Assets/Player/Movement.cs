@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        acceleration = acceleration * 100;
         rigidBody = GetComponent<Rigidbody>();
     }
 

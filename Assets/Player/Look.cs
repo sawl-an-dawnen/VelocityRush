@@ -20,7 +20,7 @@ public class Look : MonoBehaviour
     private void OnLook(InputValue value)
     {
         lookInputValue = value.Get<Vector2>();
-        Debug.Log(lookInputValue);
+        //Debug.Log(lookInputValue);
     }
 
 }
