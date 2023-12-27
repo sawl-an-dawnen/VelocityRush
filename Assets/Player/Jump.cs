@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Jump : MonoBehaviour
 {
-    public float force = 2000;
+    public float force = 10;
+    public float mnkMultiplier = .45f;
 
     private Rigidbody rigidBody;
     private bool isGrounded = false;
@@ -13,8 +14,8 @@ public class Jump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        force = 1000 * force;
         rigidBody = GetComponent<Rigidbody>();
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -39,11 +40,10 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //apply force to sphere
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
         {
-            rigidBody.AddForce(force * Time.deltaTime * Vector3.up, ForceMode.Impulse);
+            Action(force);
         }
     }
 
@@ -51,5 +51,12 @@ public class Jump : MonoBehaviour
     {
         //moveInputValue = value.Get<Vector2>();
         //move = Camera.main.transform.right * moveInputValue.x + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * moveInputValue.y;
+        if (isGrounded) {
+            Action(force);
+        }
+    }
+
+    private void Action(float f) {
+        rigidBody.AddForce(Vector3.up * f, ForceMode.Impulse);
     }
 }

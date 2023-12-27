@@ -4,11 +4,12 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     public float acceleration = 5;
-
+    [HideInInspector]
+    public Vector3 move;
     private Rigidbody rigidBody;
     private float moveX;
     private float moveZ;
-    private Vector3 move;
+
     private Vector2 moveInputValue;
 
     // Start is called before the first frame update
