@@ -6,11 +6,9 @@ public class Movement : MonoBehaviour
     public float acceleration = 5;
 
     private Rigidbody rigidBody;
-
     private float moveX;
     private float moveZ;
     private Vector3 move;
-
     private Vector2 moveInputValue;
 
     // Start is called before the first frame update
