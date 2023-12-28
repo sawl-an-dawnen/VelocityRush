@@ -3,21 +3,44 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    public float acceleration = 5;
-    public float gForce = 5;
+    public float acceleration = 5f;
+    public float airTimeReduction = .5f;
+    public float gForce = 5f;
     [HideInInspector]
     public Vector3 move;
     private Rigidbody rigidBody;
     private float moveX;
     private float moveZ;
-
     private Vector2 moveInputValue;
+    private bool isGrounded = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         acceleration = acceleration * 100;
         rigidBody = GetComponent<Rigidbody>();
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log(collision.collider.name);
+        if (collision.collider.tag == "Ground")
+        {
+            Debug.Log("GROUNDED");
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        //Debug.Log(collision.collider.name);
+        if (collision.collider.tag == "Ground")
+        {
+            Debug.Log("NOT GROUNDED");
+            isGrounded = false;
+        }
     }
 
     // Update is called once per frame
@@ -33,16 +56,27 @@ public class Movement : MonoBehaviour
 
         //normalize so we only have the direction the player wants to move in relative to the camera,
         //this ensures that we don't add up vectors and have magnitues larger than 1 when we press horizontal and vertical movemen
-        move = move.normalized; 
+        move = move.normalized;
 
         //Debug.Log(Camera.main.transform.forward);
         //apply force to sphere
-        rigidBody.AddForce(acceleration*Time.deltaTime*move, ForceMode.Acceleration);
+        if (isGrounded)
+        {
+            Action(acceleration);
+        }
+        else {
+            Action(acceleration * airTimeReduction);
+        }
         rigidBody.AddForce(gForce * Time.deltaTime * Vector3.down, ForceMode.Acceleration);
     }
 
     private void OnMove(InputValue value) {
         moveInputValue = value.Get<Vector2>();
         move = Camera.main.transform.right * moveInputValue.x + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * moveInputValue.y;
+    }
+
+    private void Action(float a) 
+    {
+        rigidBody.AddForce(a * Time.deltaTime * move, ForceMode.Acceleration);
     }
 }

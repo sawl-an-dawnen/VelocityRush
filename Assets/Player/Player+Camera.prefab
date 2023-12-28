@@ -789,6 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c7127ff359b640a20fb014ea224b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 4278278348753116126}
 --- !u!114 &4690580320541134519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +803,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 500
+  airTimeReduction: 0.5
+  gForce: 5
+  move: {x: 0, y: 0, z: 0}
 --- !u!114 &1866681504784257415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 1200
+  gracePeriod: 0.05
 --- !u!114 &5281981727259607597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,7 +834,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 3
   coolDown: 0
-  mnkMultiplier: 0.7
 --- !u!1 &6056166562905569729
 GameObject:
   m_ObjectHideFlags: 0

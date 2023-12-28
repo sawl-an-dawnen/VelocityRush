@@ -6,12 +6,12 @@ using UnityEngine.InputSystem;
 
 public class Dash : MonoBehaviour
 {
-    public float force = 3;
+    public float force = 3f;
     public float coolDown = 8f;
 
     private Rigidbody rigidBody;
     private Movement movement;
-    private float timer = 0;
+    private float timer = 0f;
 
     // Start is called before the first frame update
     void Start()
