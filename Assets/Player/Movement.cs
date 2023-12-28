@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     public float acceleration = 5;
+    public float gForce = 5;
     [HideInInspector]
     public Vector3 move;
     private Rigidbody rigidBody;
@@ -37,6 +38,7 @@ public class Movement : MonoBehaviour
         //Debug.Log(Camera.main.transform.forward);
         //apply force to sphere
         rigidBody.AddForce(acceleration*Time.deltaTime*move, ForceMode.Acceleration);
+        rigidBody.AddForce(gForce * Time.deltaTime * Vector3.down, ForceMode.Acceleration);
     }
 
     private void OnMove(InputValue value) {

@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class Jump : MonoBehaviour
 {
     public float force = 10;
-    public float mnkMultiplier = .45f;
 
     private Rigidbody rigidBody;
     private bool isGrounded = false;
