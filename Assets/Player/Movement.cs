@@ -12,7 +12,8 @@ public class Movement : MonoBehaviour
     private float moveX;
     private float moveZ;
     private Vector2 moveInputValue;
-    private bool isGrounded = false;
+    private PlayerManager player;
+    
     
 
     // Start is called before the first frame update
@@ -20,27 +21,7 @@ public class Movement : MonoBehaviour
     {
         acceleration = acceleration * 100;
         rigidBody = GetComponent<Rigidbody>();
-    }
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log(collision.collider.name);
-        if (collision.collider.tag == "Ground")
-        {
-            Debug.Log("GROUNDED");
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //Debug.Log(collision.collider.name);
-        if (collision.collider.tag == "Ground")
-        {
-            Debug.Log("NOT GROUNDED");
-            isGrounded = false;
-        }
+        player = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -60,7 +41,7 @@ public class Movement : MonoBehaviour
 
         //Debug.Log(Camera.main.transform.forward);
         //apply force to sphere
-        if (isGrounded)
+        if (player.isGrounded)
         {
             Action(acceleration);
         }

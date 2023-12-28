@@ -8,7 +8,6 @@ public class Look : MonoBehaviour
     public float speedWarpModifier = .5f;
     private Vector2 lookInputValue;
     private Rigidbody rigidBody;
-
     private float defaultPOV;
 
 

@@ -7,34 +7,23 @@ public class Jump : MonoBehaviour
 {
     public float force = 10f;
     public float gracePeriod = .05f;
-
     private float timer;
     private Rigidbody rigidBody;
-    private bool isGrounded = false;
+    private PlayerManager player;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        player = GetComponent<PlayerManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log(collision.collider.name);
-        if (collision.collider.tag == "Ground") {
-            Debug.Log("GROUNDED");
-            isGrounded = true;
-            timer = gracePeriod;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
         {
-            Debug.Log("NOT GROUNDED");
-            isGrounded = false;
+            timer = gracePeriod;
         }
     }
 
@@ -45,9 +34,8 @@ public class Jump : MonoBehaviour
             timer -= Time.deltaTime;
         }
         //apply force to sphere
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || timer > 0)) 
+        if (Input.GetKeyDown(KeyCode.Space) && (player.isGrounded || timer > 0)) 
         {
-            timer = 0f;
             Action(force);
         }
     }
@@ -56,13 +44,13 @@ public class Jump : MonoBehaviour
     {
         //moveInputValue = value.Get<Vector2>();
         //move = Camera.main.transform.right * moveInputValue.x + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * moveInputValue.y;
-        if (isGrounded || timer > 0) {
-            timer = 0f;
+        if (player.isGrounded || timer > 0) {
             Action(force);
         }
     }
 
     private void Action(float f) {
+        timer = 0f;
         rigidBody.AddForce(Vector3.up * f, ForceMode.Impulse);
     }
 }
