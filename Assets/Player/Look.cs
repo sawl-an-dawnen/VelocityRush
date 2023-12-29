@@ -22,7 +22,8 @@ public class Look : MonoBehaviour
 
     private void Update()
     {
-        camera.m_Lens.FieldOfView = defaultPOV + (rigidBody.velocity.magnitude * speedWarpModifier);
+        //camera.m_Lens.FieldOfView = defaultPOV + (rigidBody.velocity.magnitude * speedWarpModifier);
+        camera.m_Lens.FieldOfView = Mathf.Lerp(defaultPOV, defaultPOV * speedWarpModifier, Mathf.InverseLerp(5f, 100f, rigidBody.velocity.magnitude));
     }
 
     private void OnLook(InputValue value)

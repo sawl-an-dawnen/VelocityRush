@@ -21,8 +21,8 @@ public class Break : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.isGrounded && (Input.GetKey(KeyCode.LeftControl) || handBreak)) {
-            Action();
+        if (player.isGrounded && (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButtonDown(1) || handBreak)) {
+            Action(breakingForce);
         } 
     }
 
@@ -35,8 +35,8 @@ public class Break : MonoBehaviour
         }
     }
 
-    private void Action() {
-        
-        rigidBody.velocity -= breakingForce * Time.deltaTime * rigidBody.velocity;
+    private void Action(float b) 
+    {
+        rigidBody.AddForce(b * Time.deltaTime * -rigidBody.velocity, ForceMode.Acceleration);
     }
 }

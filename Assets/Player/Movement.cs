@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     public float acceleration = 5f;
-    public float airTimeReduction = .5f;
+    [Range(0f,100f)]
+    public float airTimeReduction = 20f;
     public float gForce = 5f;
     [HideInInspector]
     public Vector3 move;
@@ -13,6 +14,7 @@ public class Movement : MonoBehaviour
     private float moveZ;
     private Vector2 moveInputValue;
     private PlayerManager player;
+    private AudioSource rollingSound;
     
     
 
@@ -21,19 +23,29 @@ public class Movement : MonoBehaviour
     {
         acceleration = acceleration * 100;
         rigidBody = GetComponent<Rigidbody>();
+        rigidBody.maxAngularVelocity = float.MaxValue;
         player = GetComponent<PlayerManager>();
+        rollingSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player.isGrounded) 
+        { 
+            rollingSound.volume = rigidBody.velocity.magnitude / 60f; 
+        }
+        else 
+        {
+            rollingSound.volume = 0f;
+        }
+
         //Get the inputs for left right forward backwards
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Vertical");
 
         //create the vector for movement relative to the camera direction
         move = Camera.main.transform.right * moveX + new Vector3(Camera.main.transform.forward.x, 0f,Camera.main.transform.forward.z) * moveZ;
-        //Debug.Log(Camera.main.transform.forward);
 
         //normalize so we only have the direction the player wants to move in relative to the camera,
         //this ensures that we don't add up vectors and have magnitues larger than 1 when we press horizontal and vertical movemen
@@ -46,7 +58,7 @@ public class Movement : MonoBehaviour
             Action(acceleration);
         }
         else {
-            Action(acceleration * airTimeReduction);
+            Action(acceleration * (100f-airTimeReduction) * 0.01f);
         }
         rigidBody.AddForce(gForce * Time.deltaTime * Vector3.down, ForceMode.Acceleration);
     }
