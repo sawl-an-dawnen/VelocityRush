@@ -7,6 +7,9 @@ public class PlayerManager : MonoBehaviour
 
     public bool isGrounded = false;
 
+    public int lives = 3;
+    private int points = 0;
+
     private Rigidbody rigidBody;
 
     private float maxVelocity = 0f;
@@ -46,5 +49,22 @@ public class PlayerManager : MonoBehaviour
         if (rigidBody.velocity.magnitude > maxVelocity) {
             maxVelocity = rigidBody.velocity.magnitude;
         }
+
+        if (lives <= 0) {
+            Debug.Log("Game Over");
+        }
+    }
+
+    public void SubLife() {
+        --lives;
+    }
+
+    public void AddLife(int l) {
+        lives += l;
+    }
+
+    public int AddPoints(int p) {
+        points += p;
+        return points;
     }
 }
