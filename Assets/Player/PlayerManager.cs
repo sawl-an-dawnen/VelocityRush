@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
 
     public bool isGrounded = false;
+    public bool gravity = true;
 
     public int lives = 3;
     private int points = 0;
@@ -66,5 +67,9 @@ public class PlayerManager : MonoBehaviour
     public int AddPoints(int p) {
         points += p;
         return points;
+    }
+
+    public void InvertGravity() {
+        gravity = !gravity;
     }
 }

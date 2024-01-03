@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rigidBody;
     private float moveX;
     private float moveZ;
+    private Vector3 gravityVector = Vector3.up;
     private Vector2 moveInputValue;
     private PlayerManager player;
     private AudioSource rollingSound;
@@ -60,12 +61,28 @@ public class Movement : MonoBehaviour
         else {
             Action(acceleration * (100f-airTimeReduction) * 0.01f);
         }
-        rigidBody.AddForce(gForce * Time.deltaTime * Vector3.down, ForceMode.Acceleration);
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            player.InvertGravity();
+        }
+
+        if (player.gravity)
+        {
+            rigidBody.AddForce(gForce * Time.deltaTime * Vector3.down, ForceMode.Acceleration);
+        }
+        else 
+        {
+            rigidBody.AddForce(gForce * 2.0f * Time.deltaTime * Vector3.up, ForceMode.Acceleration);
+        }
     }
 
     private void OnMove(InputValue value) {
         moveInputValue = value.Get<Vector2>();
         move = Camera.main.transform.right * moveInputValue.x + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * moveInputValue.y;
+    }
+
+    private void OnGravityShift() {
+        player.InvertGravity();
     }
 
     private void Action(float a) 

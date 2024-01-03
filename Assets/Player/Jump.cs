@@ -33,6 +33,7 @@ public class Jump : MonoBehaviour
         if (timer > 0f) {
             timer -= Time.deltaTime;
         }
+
         //apply force to sphere
         if (Input.GetKeyDown(KeyCode.Space) && (player.isGrounded || timer > 0)) 
         {
@@ -51,6 +52,8 @@ public class Jump : MonoBehaviour
 
     private void Action(float f) {
         timer = 0f;
-        rigidBody.AddForce(Vector3.up * f, ForceMode.Impulse);
+        if (player.gravity) { rigidBody.AddForce(Vector3.up * f, ForceMode.Impulse); }
+        else { rigidBody.AddForce(Vector3.down * f, ForceMode.Impulse); }
+        
     }
 }
