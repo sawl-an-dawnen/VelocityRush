@@ -2265,11 +2265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.1006068
+      value: -0.10060683
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.119077854
+      value: -0.11907789
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2337,11 +2337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000024837515
+      value: -0.00000001825892
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000015762025
+      value: 0.000000011587209
       objectReference: {fileID: 0}
     - target: {fileID: 7005336749321694311, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
@@ -2409,11 +2409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.1006068
+      value: -0.10060683
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.119077854
+      value: -0.11907789
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3290,7 +3290,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e7a7a05a86686b148bc81460efcacf1e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 950500b650a66e143b8c8f2ad67b4744, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
