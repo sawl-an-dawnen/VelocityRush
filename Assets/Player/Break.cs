@@ -26,8 +26,6 @@ public class Break : MonoBehaviour
         } 
     }
 
-
-    int i = 0;
     private void OnBreak(InputValue input)
     {
         if (input.GetType() == input.GetType()) {

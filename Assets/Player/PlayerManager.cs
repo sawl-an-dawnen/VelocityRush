@@ -8,13 +8,10 @@ public class PlayerManager : MonoBehaviour
     public bool isGrounded = false;
     public bool gravity = true;
 
-    public int lives = 3;
+    private int lives = 3;
     private int points = 0;
-
     private Rigidbody rigidBody;
-
     private float maxVelocity = 0f;
-
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +19,12 @@ public class PlayerManager : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
         {
-            Debug.Log("GROUNDED");
+            //Debug.Log("GROUNDED");
             isGrounded = true;
         }
     }
@@ -38,7 +34,7 @@ public class PlayerManager : MonoBehaviour
         //Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
         {
-            Debug.Log("NOT GROUNDED");
+            //Debug.Log("NOT GROUNDED");
             isGrounded = false;
         }
     }
@@ -46,7 +42,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(maxVelocity);
+        //Debug.Log(maxVelocity);
         if (rigidBody.velocity.magnitude > maxVelocity) {
             maxVelocity = rigidBody.velocity.magnitude;
         }
@@ -66,6 +62,7 @@ public class PlayerManager : MonoBehaviour
 
     public int AddPoints(int p) {
         points += p;
+        Debug.Log(points);
         return points;
     }
 
