@@ -9,6 +9,7 @@ public class Dash : MonoBehaviour
     public float force = 3f;
     public float coolDown = 8f;
 
+    private PlayerManager player;
     private Rigidbody rigidBody;
     private Movement movement;
     private float timer = 0f;
@@ -16,6 +17,7 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<PlayerManager>();
         rigidBody = GetComponent<Rigidbody>();
         movement = GetComponent<Movement>();
     }
@@ -28,7 +30,7 @@ public class Dash : MonoBehaviour
             timer -= Time.deltaTime;
         }
         //apply force to sphere
-        if (Input.GetMouseButtonDown(0) && timer <= 0f)
+        if (Input.GetMouseButtonDown(0) && timer <= 0f && player.canDash)
         {
             Action(force);
         }
@@ -36,7 +38,7 @@ public class Dash : MonoBehaviour
 
     private void OnDash()
     {
-        if (timer <= 0f)
+        if (timer <= 0f && player.canDash)
         {
             Action(force);
         }

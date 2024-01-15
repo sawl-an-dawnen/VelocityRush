@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - SFX-1
   - SFX-2
+  - GameMusic
   layers:
   - Default
   - TransparentFX

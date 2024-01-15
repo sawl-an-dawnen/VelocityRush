@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -7,6 +8,9 @@ public class PlayerManager : MonoBehaviour
 
     public bool isGrounded = false;
     public bool gravity = true;
+    public bool canJump = true;
+    public bool canDash = true;
+    public bool canShiftGravity = true;
 
     private int lives = 3;
     private int points = 0;
@@ -68,5 +72,28 @@ public class PlayerManager : MonoBehaviour
 
     public void InvertGravity() {
         gravity = !gravity;
+    }
+
+    public void ActivateJump() {
+        canJump = true;
+    }
+    public void DeactivateJump() {
+        canJump = false;
+    }
+    public void ActivateDash()
+    {
+        canDash = true;
+    }
+    public void DeactivateDash()
+    {
+        canDash = false;
+    }
+    public void ActivateGravityShift()
+    {
+        canShiftGravity = true;
+    }
+    public void DeactivateGravityShift()
+    {
+        canShiftGravity = false;
     }
 }

@@ -35,7 +35,7 @@ public class Jump : MonoBehaviour
         }
 
         //apply force to sphere
-        if (Input.GetKeyDown(KeyCode.Space) && (player.isGrounded || timer > 0)) 
+        if (Input.GetKeyDown(KeyCode.Space) && (player.isGrounded || timer > 0) && player.canJump) 
         {
             Action(force);
         }
@@ -45,7 +45,7 @@ public class Jump : MonoBehaviour
     {
         //moveInputValue = value.Get<Vector2>();
         //move = Camera.main.transform.right * moveInputValue.x + new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z) * moveInputValue.y;
-        if (player.isGrounded || timer > 0) {
+        if ((player.isGrounded || timer > 0) && player.canJump) {
             Action(force);
         }
     }
