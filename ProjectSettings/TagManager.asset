@@ -9,6 +9,8 @@ TagManager:
   - SFX-1
   - SFX-2
   - GameMusic
+  - GameManager
+  - LevelManager
   layers:
   - Default
   - TransparentFX

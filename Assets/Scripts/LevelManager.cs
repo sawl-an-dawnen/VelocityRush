@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public int levelIndex;
     public bool jump = false;
     public bool dash = false;
     public bool gravityShift = false;
