@@ -20,7 +20,6 @@ public class FinishLine : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             gameManager.CompleteLevel(levelManager.levelIndex - 1);
-            Debug.Log(gameManager.levels[levelManager.levelIndex - 1]);
             sceneLoader = GetComponent<SceneLoader>();
             sceneLoader.LoadScene(nextLevel);
         }

@@ -8,6 +8,12 @@ public class MainMenuController : MonoBehaviour
     public GameObject levelSelect;
 
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void ActivateLevelSelection() {
         titleScreen.SetActive(false);
         levelSelect.SetActive(true);

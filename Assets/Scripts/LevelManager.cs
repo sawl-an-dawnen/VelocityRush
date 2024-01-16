@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         gameMusic = GameObject.FindGameObjectWithTag("GameMusic").GetComponent<AudioSource>();
 
-        if (levelMusic != null) {
+        if (levelMusic != null && gameMusic.clip != levelMusic) {
             gameMusic.Stop();
             gameMusic.clip = levelMusic;
             gameMusic.Play();

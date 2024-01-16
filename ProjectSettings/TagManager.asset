@@ -11,6 +11,8 @@ TagManager:
   - GameMusic
   - GameManager
   - LevelManager
+  - LevelButton
+  - LevelSelector
   layers:
   - Default
   - TransparentFX

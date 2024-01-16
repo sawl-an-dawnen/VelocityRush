@@ -21,7 +21,7 @@ public class Break : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.isGrounded && (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButtonDown(1) || handBreak)) {
+        if (player.isGrounded && (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButton(1) || handBreak)) {
             Action(breakingForce);
         } 
     }
