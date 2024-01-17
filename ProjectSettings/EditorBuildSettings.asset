@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Sewers/SewerLevel02.unity
     guid: 8ba41898c424c7e4682c3e2d81cf7f68
   - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel03.unity
+    path: Assets/Scenes/Sewers/SewerLevel04.unity
     guid: 2e135187e474cda4d8df6ec0adc95605
   - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel04.unity
+    path: Assets/Scenes/Sewers/SewerLevel06.unity
     guid: 2ab83b9cb3bfd3348b6d4e4ced84b191
   m_configObjects: {}

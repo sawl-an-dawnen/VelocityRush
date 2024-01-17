@@ -738,7 +738,7 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_YAxis:
-    Value: 1
+    Value: 0.51
     m_SpeedMode: 0
     m_MaxSpeed: 4
     m_AccelTime: 0.2
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_CollideAgainst:
     serializedVersion: 2
     m_Bits: 1
-  m_IgnoreTag: 
+  m_IgnoreTag: CamColliderIgnore
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1262,6 +1262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 0
   gravity: 1
+  canJump: 1
+  canDash: 1
   canShiftGravity: 1
 --- !u!114 &1341507628530993361
 MonoBehaviour:

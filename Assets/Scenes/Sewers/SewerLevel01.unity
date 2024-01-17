@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -412,6 +416,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -777,6 +785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -934,6 +946,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1185,7 +1201,7 @@ GameObject:
   - component: {fileID: 610913642}
   m_Layer: 0
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: CamColliderIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1298,6 +1314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1370,6 +1390,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1525,6 +1549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1654,7 +1682,7 @@ GameObject:
   - component: {fileID: 822211650}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: CamColliderIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1868,6 +1896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1885,7 +1917,7 @@ GameObject:
   - component: {fileID: 1040573083}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: CamColliderIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2135,7 +2167,7 @@ GameObject:
   - component: {fileID: 1245862723}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: CamColliderIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2481,6 +2513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2554,6 +2590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2568,20 +2608,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.100606814
+      value: -0.13962719
       objectReference: {fileID: 0}
     - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11907788
+      value: -0.069321826
       objectReference: {fileID: 0}
     - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9541493
+      value: -0.977153
       objectReference: {fileID: 0}
     - target: {fileID: 284157059327811830, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25553432
+      value: -0.14446718
       objectReference: {fileID: 0}
     - target: {fileID: 1866681504784257415, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_Enabled
@@ -2593,31 +2641,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2612511188291674826, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.5
+      value: 3.24646
       objectReference: {fileID: 0}
     - target: {fileID: 2612511188291674826, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -9.995483
       objectReference: {fileID: 0}
     - target: {fileID: 3800647737980191259, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.100606784
+      value: -0.1396272
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11907785
+      value: -0.06932183
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.95414937
+      value: -0.977153
       objectReference: {fileID: 0}
     - target: {fileID: 4239794713974875817, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25553426
+      value: -0.14446718
       objectReference: {fileID: 0}
     - target: {fileID: 4278278348753116126, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
@@ -2665,27 +2725,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.5
+      value: 3.24646
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -9.995483
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.84433323
+      value: 0.98769736
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5358185
+      value: 0.15637772
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000003558598
+      value: 0.000000014542167
       objectReference: {fileID: 0}
     - target: {fileID: 6988527223055612142, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000022583063
+      value: -0.0000000023023963
       objectReference: {fileID: 0}
     - target: {fileID: 7005336749321694311, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
@@ -2757,19 +2817,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.1006068
+      value: -0.13962722
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.119077854
+      value: -0.06932184
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.95414937
+      value: -0.977153
       objectReference: {fileID: 0}
     - target: {fileID: 7852565393953334555, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25553426
+      value: -0.14446718
       objectReference: {fileID: 0}
     - target: {fileID: 7911435874176731286, guid: 0ea25c9e2a6794d40b6651daf9d6e962, type: 3}
       propertyPath: m_Name
@@ -2847,6 +2907,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3276,6 +3340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3348,6 +3416,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3464,6 +3536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3546,6 +3622,10 @@ PrefabInstance:
     - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
       propertyPath: m_Name
       value: Railing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3967,7 +4047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7502347709775314718, guid: 493e9eeff63a2564ea5c92b325c6029f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9000244
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7502347709775314718, guid: 493e9eeff63a2564ea5c92b325c6029f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4173,6 +4253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Railing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8979638791816441184, guid: 939139ee716e645419a29f854d8cd210, type: 3}
+      propertyPath: m_TagString
+      value: CamColliderIgnore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4190,7 +4274,7 @@ GameObject:
   - component: {fileID: 2101189651}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: CamColliderIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
