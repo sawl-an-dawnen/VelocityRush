@@ -66,7 +66,7 @@ public class PlayerManager : MonoBehaviour
 
     public int AddPoints(int p) {
         points += p;
-        Debug.Log(points);
+        //Debug.Log(points);
         return points;
     }
 
