@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -193,7 +193,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -243,7 +243,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 8.5, z: -4}
+  m_FollowOffset: {x: 0, y: 3.246474, z: -9.99549}
   m_XDamping: 0.3
   m_YDamping: 0.3
   m_ZDamping: 0
@@ -479,7 +479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819077494230463429}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.11907787, y: -0.9541493, z: 0.25553432, w: -0.1006068}
+  m_LocalRotation: {x: -0.069321826, y: -0.977153, z: -0.14446718, w: -0.13962719}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 8.5, z: -4}
+  m_FollowOffset: {x: 0, y: 3.246474, z: -9.99549}
   m_XDamping: 0.3
   m_YDamping: 0.3
   m_ZDamping: 0
@@ -689,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 2433051261439168728}
   serializedVersion: 2
   m_LocalRotation: {x: 0.046634406, y: 0.94253993, z: 0.2954948, w: -0.1487498}
-  m_LocalPosition: {x: 0, y: 8.500001, z: -4}
+  m_LocalPosition: {x: 0, y: 3.24646, z: -9.995483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -886,7 +886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3110051534153820132}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.119077906, y: -0.9541493, z: 0.25553432, w: -0.10060683}
+  m_LocalRotation: {x: -0.06932184, y: -0.977153, z: -0.14446718, w: -0.1396272}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 8.5, z: -4}
+  m_FollowOffset: {x: 0, y: 3.246474, z: -9.99549}
   m_XDamping: 0.3
   m_YDamping: 0.3
   m_ZDamping: 0
@@ -1639,7 +1639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7309395567458741887}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.11907786, y: -0.9541493, z: 0.25553432, w: -0.1006068}
+  m_LocalRotation: {x: -0.06932184, y: -0.977153, z: -0.14446718, w: -0.1396272}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1717,8 +1717,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911435874176731286}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7721655, y: 12.2, z: -8.66}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 39.61, y: -516.1794, z: -292.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1755,8 +1755,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8203450887089777874}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5358185, y: 0.000000020033037, z: -0.000000012713076, w: 0.8443332}
-  m_LocalPosition: {x: 0, y: 8.500001, z: -4}
+  m_LocalRotation: {x: 0.15637772, y: -0.0000000056911187, z: 9.010497e-10, w: 0.98769736}
+  m_LocalPosition: {x: 0, y: 3.24646, z: -9.995483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1772,7 +1772,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
