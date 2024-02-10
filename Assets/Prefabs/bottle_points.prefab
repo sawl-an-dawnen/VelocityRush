@@ -103,6 +103,8 @@ MonoBehaviour:
   isKey: 0
   pointValue: 10
   numberOfLives: 1
+  detectionRange: 3
+  moveSpeed: 20
   pickUpSound: {fileID: 0}
   toActivate: []
 --- !u!65 &471517966535139887

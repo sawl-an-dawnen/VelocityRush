@@ -15,17 +15,23 @@ public class Collectible : MonoBehaviour
     public int pointValue = 10;
     public int numberOfLives = 1;
 
+    public float detectionRange = 2f;
+    public float moveSpeed = 5f;
+
     public AudioClip pickUpSound;
     private AudioSource playerSFX;
 
     public GameObject[] toActivate;
 
     PlayerManager player;
+    Transform playerTransform;
+    bool chasePlayer = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerSFX = GameObject.FindGameObjectWithTag("SFX-1").GetComponent<AudioSource>();
         rotationSpeed *= 10;
     }
@@ -33,6 +39,17 @@ public class Collectible : MonoBehaviour
     private void Update()
     {
         gameObject.transform.Rotate(Vector3.up.normalized * rotationSpeed * Time.deltaTime, Space.World);
+
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        if (distanceToPlayer <= detectionRange) {
+            chasePlayer = true;
+        }
+        if (chasePlayer) {
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            transform.position += direction * moveSpeed * Time.deltaTime;
+        }
+
+
     }
 
     public void OnTriggerEnter(Collider other)
