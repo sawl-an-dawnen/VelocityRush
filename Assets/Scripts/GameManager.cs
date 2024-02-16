@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(levelSelector.transform.childCount);
         levels = new bool[levelSelector.transform.childCount];
 
         //initilize the levels array
