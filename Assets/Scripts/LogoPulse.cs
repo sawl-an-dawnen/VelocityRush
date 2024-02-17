@@ -8,7 +8,6 @@ public class LogoPulse : MonoBehaviour
     public float minScale = 0.8f;    // Adjust this value to set the minimum scale
     public float maxScale = 1.2f;    // Adjust this value to set the maximum scale
 
-    private bool increasingScale = true;
     private RectTransform rectTransform;
 
     void Start()
