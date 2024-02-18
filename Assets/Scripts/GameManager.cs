@@ -1,14 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    [HideInInspector]
     public bool[] levels;
     public GameObject levelSelector;
+
+    public Slider xAxisSlider, yAxisSlider, musicSlider, sfxSlider;
+
+    [HideInInspector]
+    public float xSens, ySens, musicVolume, sfxVolume;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,10 @@ public class GameManager : MonoBehaviour
             {
                 levels[i] = data.levels[i];
             }
+            xSens = data.xSens;
+            ySens = data.ySens;
+            musicVolume = data.musicVolume;
+            sfxVolume = data.sfxVolume;
         }
     }
 

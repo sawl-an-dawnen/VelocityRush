@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 [System.Serializable]
 public class GameData
 {
     public bool[] levels;
+    public float xSens, ySens, musicVolume, sfxVolume;
 
     public GameData(GameManager gameManager) 
     {
@@ -14,5 +11,9 @@ public class GameData
         {
             levels[i] = gameManager.levels[i];
         }
+        xSens = gameManager.xSens;
+        ySens = gameManager.ySens;
+        musicVolume = gameManager.musicVolume;
+        sfxVolume = gameManager.sfxVolume;
     }
 }
