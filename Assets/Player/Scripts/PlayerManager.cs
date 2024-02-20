@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.name);
+        //Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
         {
             //Debug.Log("GROUNDED");

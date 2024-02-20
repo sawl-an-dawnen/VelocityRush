@@ -10,18 +10,27 @@ public class Look : MonoBehaviour
     public float speedWarpModifier = .5f;
     private Vector2 lookInputValue;
     private Rigidbody rigidBody;
-    private float defaultPOV;
+    private float defaultPOV, defaultXSense, defaultYSense;
     private PlayerManager player;
+    private GameManager gameManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rigidBody = GetComponent<Rigidbody>();
         defaultPOV = freeCam.m_Lens.FieldOfView;
+        defaultXSense = freeCam.m_XAxis.m_MaxSpeed;
+        defaultYSense = freeCam.m_YAxis.m_MaxSpeed;
+
+        freeCam.m_XAxis.m_MaxSpeed = 2f * defaultXSense * gameManager.xSens * .01f;
+        freeCam.m_YAxis.m_MaxSpeed = 2f * defaultYSense * gameManager.ySens * .01f;
+        Debug.Log(freeCam.m_XAxis.m_MaxSpeed);
+        Debug.Log(freeCam.m_YAxis.m_MaxSpeed);
     }
 
     private void Update()
