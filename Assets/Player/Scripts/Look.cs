@@ -19,7 +19,12 @@ public class Look : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+        try { 
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>(); 
+        }
+        catch { }
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rigidBody = GetComponent<Rigidbody>();
@@ -27,10 +32,15 @@ public class Look : MonoBehaviour
         defaultXSense = freeCam.m_XAxis.m_MaxSpeed;
         defaultYSense = freeCam.m_YAxis.m_MaxSpeed;
 
-        freeCam.m_XAxis.m_MaxSpeed = 2f * defaultXSense * gameManager.xSens * .01f;
-        freeCam.m_YAxis.m_MaxSpeed = 2f * defaultYSense * gameManager.ySens * .01f;
-        Debug.Log(freeCam.m_XAxis.m_MaxSpeed);
-        Debug.Log(freeCam.m_YAxis.m_MaxSpeed);
+        try
+        {
+            freeCam.m_XAxis.m_MaxSpeed = 2f * defaultXSense * gameManager.xSens * .01f;
+            freeCam.m_YAxis.m_MaxSpeed = 2f * defaultYSense * gameManager.ySens * .01f;
+        }
+        catch { }
+
+        //Debug.Log(freeCam.m_XAxis.m_MaxSpeed);
+        //Debug.Log(freeCam.m_YAxis.m_MaxSpeed);
     }
 
     private void Update()
