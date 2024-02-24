@@ -61,6 +61,12 @@ public class PlayerManager : MonoBehaviour
         lives += l;
     }
 
+    public int SetLives(int l)
+    {
+        lives = l;
+        return lives;
+    }
+
     public int AddPoints(int p) {
         points += p;
         //Debug.Log(points);

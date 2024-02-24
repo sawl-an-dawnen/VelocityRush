@@ -31,6 +31,7 @@ public class SceneLoader : MonoBehaviour
         }
         if (isReset) 
         {
+            Time.timeScale = 1;
             Debug.Log("destroy!");
             foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
             {

@@ -7,7 +7,7 @@ public class CanvasController : MonoBehaviour
     public GameObject activate;
     public GameObject deactivate;
 
-    public void trigger() {
+    public void Trigger() {
         activate.SetActive(true);
         deactivate.SetActive(false);
     }

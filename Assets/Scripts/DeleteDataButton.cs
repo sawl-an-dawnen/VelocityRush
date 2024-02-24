@@ -24,6 +24,6 @@ public class DeleteDataButton : MonoBehaviour
             obj.GetComponent<EnableLevel>().Reset();
             Debug.Log("Button Reset");
         }
-        gameManager.DeleteSave();
+        gameManager.DeleteLevelProgression();
     }
 }

@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public float xSens, ySens, musicVolume, sfxVolume;
 
-
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,6 +39,7 @@ public class GameManager : MonoBehaviour
             xSens = data.xSens;
             ySens = data.ySens;
             musicVolume = data.musicVolume;
+            mainMusicSource.volume = musicVolume * .01f;
             sfxVolume = data.sfxVolume;
         }
     }
@@ -66,6 +65,29 @@ public class GameManager : MonoBehaviour
             //Debug.Log(levels[i] + " " + i);
         }
         SaveSystem.DeleteSave();
+    }
+
+    public void DeleteLevelProgression() {
+        for (int i = 0; i < levels.Length; i++)
+        {
+            levels[i] = false;
+            //Debug.Log(levels[i] + " " + i);
+        }
+        SaveSystem.SaveGame(this);
+    }
+
+    public void DeletePlayerSettings()
+    {
+        xSens = 50f;
+        ySens = 50f;
+        musicVolume = 50f;
+        mainMusicSource.volume = .5f;
+        sfxVolume = 50f;
+        xAxisSlider.value = 50f;
+        yAxisSlider.value = 50f;
+        musicSlider.value = 50;
+        sfxSlider.value = 50f;
+        SaveSystem.SaveGame(this);
     }
 
     public void updateXSense(UnityEngine.UI.Slider s)
