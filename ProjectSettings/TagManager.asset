@@ -15,6 +15,7 @@ TagManager:
   - LevelSelector
   - CamColliderIgnore
   - Prompt01
+  - Prompt02
   layers:
   - Default
   - TransparentFX
