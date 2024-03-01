@@ -5,11 +5,14 @@ using UnityEngine.InputSystem;
 
 public class Jump : MonoBehaviour
 {
+    [HideInInspector]
+    public bool pressed = false;
     public float force = 10f;
     public float gracePeriod = .05f;
     private float timer;
     private Rigidbody rigidBody;
     private PlayerManager player;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pressed = false;
         if (timer > 0f) {
             timer -= Time.deltaTime;
         }
@@ -54,6 +58,7 @@ public class Jump : MonoBehaviour
         timer = 0f;
         if (player.gravity) { rigidBody.AddForce(Vector3.up * f, ForceMode.Impulse); }
         else { rigidBody.AddForce(Vector3.down * f, ForceMode.Impulse); }
+        pressed = true;
         
     }
 }

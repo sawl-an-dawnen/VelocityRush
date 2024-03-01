@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 100c71dcee05b3b419d0b4662b16247f
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c22892afcc5df7d498e706831844c84f
+  - enabled: 1
     path: Assets/Scenes/Sewers/SewerLevel01.02.unity
     guid: c919db81ee6ed8e4394e02486f3dd9ae
   - enabled: 1

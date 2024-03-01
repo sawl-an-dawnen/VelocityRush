@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Dash : MonoBehaviour
 {
+    [HideInInspector]
+    public bool pressed = false;
     public float force = 3f;
     public float coolDown = 8f;
 
@@ -25,6 +27,7 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pressed = false;
         if (timer > 0f)
         {
             timer -= Time.deltaTime;
@@ -51,5 +54,6 @@ public class Dash : MonoBehaviour
         }
         rigidBody.AddForce(movement.move * f, ForceMode.Impulse);
         timer = coolDown;
+        pressed = true;
     }
 }

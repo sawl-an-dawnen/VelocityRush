@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GravityShift : MonoBehaviour
 {
-
+    public bool pressed = false;
     public float gForce = 1000f;
 
     private PlayerManager player;
@@ -22,9 +23,11 @@ public class GravityShift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pressed = false;
         if (Input.GetKeyDown(KeyCode.E) && player.canShiftGravity)
         {
             player.InvertGravity();
+            pressed = true;
         }
 
         if (player.gravity)
@@ -41,7 +44,8 @@ public class GravityShift : MonoBehaviour
     {
         if (player.canShiftGravity) 
         { 
-            player.InvertGravity(); 
+            player.InvertGravity();
+            pressed = true;
         }
     }
 

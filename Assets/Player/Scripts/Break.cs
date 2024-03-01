@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Break : MonoBehaviour
 {
+    [HideInInspector]
+    public bool pressed = false;
     public float breakingForce = 25f;
     private Rigidbody rigidBody;
     private PlayerManager player;
@@ -21,6 +23,7 @@ public class Break : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pressed = false;
         if (player.isGrounded && (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButton(1) || handBreak)) {
             Action(breakingForce);
         } 
@@ -36,5 +39,6 @@ public class Break : MonoBehaviour
     private void Action(float b) 
     {
         rigidBody.AddForce(b * Time.deltaTime * -rigidBody.velocity, ForceMode.Acceleration);
+        pressed = true;
     }
 }

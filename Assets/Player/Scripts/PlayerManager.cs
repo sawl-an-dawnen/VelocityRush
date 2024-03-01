@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rigidBody;
     private float maxVelocity = 0f;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class PlayerManager : MonoBehaviour
 
         if (lives <= 0) {
             Debug.Log("Game Over");
+            gameObject.GetComponent<SceneLoader>().LoadScene();
         }
     }
 
