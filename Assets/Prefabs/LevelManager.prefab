@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5662218587676970657}
   - component: {fileID: 3659975645811694475}
+  - component: {fileID: 5192469623916415683}
+  - component: {fileID: 6324777534774816663}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: LevelManager
@@ -49,3 +51,35 @@ MonoBehaviour:
   dash: 0
   gravityShift: 0
   levelMusic: {fileID: 0}
+  prompted: 0
+  promptID: 0
+  objective: 
+--- !u!114 &5192469623916415683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135028934966103482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e5ee253e9b77844b0d29323d60fe63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTrialMode: 0
+  timeLimit: 0
+--- !u!114 &6324777534774816663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135028934966103482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f4b47e54b11e340b8abdfcaa05c276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: GameOver
+  activateArray: []
+  isReset: 1

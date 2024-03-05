@@ -9,6 +9,7 @@ public class StageToggler : MonoBehaviour
 
     bool sewerActive = true;
     bool cityActive = false;
+    bool skyActive = false;
 
     public void ToggleSelector() {
         if (sewerActive)

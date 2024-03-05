@@ -16,6 +16,8 @@ TagManager:
   - CamColliderIgnore
   - Prompt01
   - Prompt02
+  - Lives
+  - Timer
   layers:
   - Default
   - TransparentFX

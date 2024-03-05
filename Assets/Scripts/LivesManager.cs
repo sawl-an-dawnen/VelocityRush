@@ -20,16 +20,13 @@ public class LivesManager : MonoBehaviour
     void Start()
     {
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
         if (mode == Mode.Reset)
         {
             playerManager.SetLives(lives);
         }
-        else {
+        else
+        {
             playerManager.AddLife(lives);
         }
     }

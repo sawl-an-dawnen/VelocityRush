@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     public bool canJump = true;
     public bool canDash = true;
     public bool canShiftGravity = true;
+
+    public TextMeshProUGUI livesUI;
 
     private int lives = 3;
     private int points = 0;
@@ -44,6 +47,8 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        livesUI.text = "LIVES: " + lives;
+
         //Debug.Log(maxVelocity);
         if (rigidBody.velocity.magnitude > maxVelocity) {
             maxVelocity = rigidBody.velocity.magnitude;
