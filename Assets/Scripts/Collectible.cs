@@ -46,10 +46,9 @@ public class Collectible : MonoBehaviour
         }
         if (chasePlayer) {
             Vector3 direction = (playerTransform.position - transform.position).normalized;
+            moveSpeed = moveSpeed + 10f * Time.deltaTime;
             transform.position += direction * moveSpeed * Time.deltaTime;
         }
-
-
     }
 
     public void OnTriggerEnter(Collider other)

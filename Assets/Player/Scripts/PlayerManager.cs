@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public bool canJump = true;
     public bool canDash = true;
     public bool canShiftGravity = true;
+    public bool debugMode = false;
 
     public TextMeshProUGUI livesUI;
 
@@ -61,7 +62,10 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void SubLife() {
-        --lives;
+        if (!debugMode)
+        {
+            --lives;
+        }
     }
 
     public void AddLife(int l) {
