@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
     private Vector2 moveInputValue;
     private PlayerManager player;
     private AudioSource rollingSound;
+
+    private SphereCollider collider;
     
  
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class Movement : MonoBehaviour
         rigidBody.maxAngularVelocity = float.MaxValue;
         player = GetComponent<PlayerManager>();
         rollingSound = GetComponent<AudioSource>();
+        collider = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -59,7 +62,6 @@ public class Movement : MonoBehaviour
             Action(acceleration * (100f-airTimeReduction) * 0.01f);
         }
 
-
     }
 
     private void OnMove(InputValue value) {
@@ -70,5 +72,10 @@ public class Movement : MonoBehaviour
     private void Action(float a) 
     {
         rigidBody.AddForce(a * Time.deltaTime * move, ForceMode.Acceleration);
+    }
+
+    public void OnCollisionStay(Collision collision)
+    {
+        Debug.Log(collision.collider.name);
     }
 }

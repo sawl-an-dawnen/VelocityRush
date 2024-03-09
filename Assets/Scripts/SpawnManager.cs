@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
         checkPoint = location;
     }
     public void Respawn() {
-        Camera.main.transform.position = checkPoint.transform.position;
+        //Camera.main.transform.position = checkPoint.transform.position;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         gameObject.transform.position = checkPoint.transform.position;
