@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -8.41308e-17, y: -0.85448545, z: 0.5194753, w: 2.0513489e-17}
   m_LocalPosition: {x: -10.223, y: 1.3665082, z: 12.770193}
-  m_LocalScale: {x: -0.36601126, y: -0.36601126, z: -0.32654792}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -0.28, y: -0.28, z: -0.2498104}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 62.594, y: -180, z: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   isKey: 0
   pointValue: 10
   numberOfLives: 1
-  detectionRange: 3
+  detectionRange: 4
   moveSpeed: 20
   pickUpSound: {fileID: 8300000, guid: 4302c336db0db4d4d8864499fdac353c, type: 3}
   toActivate: []
