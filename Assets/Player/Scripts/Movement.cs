@@ -76,6 +76,6 @@ public class Movement : MonoBehaviour
 
     public void OnCollisionStay(Collision collision)
     {
-        Debug.Log(collision.collider.name);
+        //Debug.Log(collision.collider.name);
     }
 }
