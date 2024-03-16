@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         //Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
@@ -34,7 +34,6 @@ public class PlayerManager : MonoBehaviour
             isGrounded = true;
         }
     }
-
     private void OnCollisionExit(Collision collision)
     {
         //Debug.Log(collision.collider.name);
