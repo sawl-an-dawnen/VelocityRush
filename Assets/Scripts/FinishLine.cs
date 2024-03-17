@@ -11,6 +11,7 @@ public class FinishLine : MonoBehaviour
     private SceneLoader sceneLoader;
     private GameManager gameManager;
     private LevelManager levelManager;
+    private TimeTrial timeTrial;
     private AudioSource audioSource;
     private bool levelComplete = false;
 
@@ -19,6 +20,7 @@ public class FinishLine : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         audioSource = GameObject.FindGameObjectWithTag("SFX-2").GetComponent<AudioSource>();
+        timeTrial = levelManager.gameObject.GetComponent<TimeTrial>();
     }
 
     private void Update()
@@ -28,7 +30,6 @@ public class FinishLine : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0) 
             {
-                gameManager.CompleteLevel(levelManager.levelIndex - 1);
                 sceneLoader = GetComponent<SceneLoader>();
                 sceneLoader.LoadScene(nextLevel);
             }
@@ -38,6 +39,8 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
+            timeTrial.active = false;
+            gameManager.CompleteLevel(levelManager.levelIndex - 1, timeTrial.timer);
             audioSource.PlayOneShot(victorySound);
             levelComplete = true;
             Destroy(gameObject.GetComponent<MeshCollider>());

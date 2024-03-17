@@ -1,12 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     [HideInInspector]
     public bool[] levels;
+    [HideInInspector]
+    public float[] records;
     public GameObject levelSelector;
     public AudioSource mainMusicSource;
 
@@ -20,11 +19,13 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log(levelSelector.transform.childCount);
         levels = new bool[levelSelector.transform.childCount];
+        records = new float[levelSelector.transform.childCount];
 
         //initilize the levels array
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i] = false;
+            records[i] = 0f;
             //Debug.Log(levels[i] + " " + i);
         }
 
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < levels.Length; i++)
             {
                 levels[i] = data.levels[i];
+                records[i] = data.records[i];
             }
             xSens = data.xSens;
             ySens = data.ySens;
@@ -44,9 +46,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CompleteLevel(int i)
+    public void CompleteLevel(int i, float t)
     {
         levels[i] = true;
+        if (t < records[i] || records[i] <= 0f)
+            records[i] = t;
 
         //save level completion
         SaveSystem.SaveGame(this);
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i] = false;
-            //Debug.Log(levels[i] + " " + i);
+            records[i] = 0f;
         }
         SaveSystem.DeleteSave();
     }
@@ -71,7 +75,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i] = false;
-            //Debug.Log(levels[i] + " " + i);
+            records[i] = 0f;
         }
         SaveSystem.SaveGame(this);
     }

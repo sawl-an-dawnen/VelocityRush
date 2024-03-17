@@ -1,35 +1,21 @@
 using TMPro;
 using UnityEngine;
 
-public class TimeTrial : MonoBehaviour
+public class TimeRecord : MonoBehaviour
 {
-    public bool timeTrialMode = false;
-    [HideInInspector]
-    public bool active = true;
-    public float timeLimit;
-    [HideInInspector]
-    public float timer = 0f;
-    private TextMeshProUGUI timerUI;
+    public int levelIndex;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        timerUI = GameObject.FindGameObjectWithTag("Timer").GetComponent<TextMeshProUGUI>();
-        //Debug.Log(UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset.GetType().Name);
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gameObject.GetComponent<TextMeshProUGUI>().text = UpdateTimerDisplay(gameManager.records[levelIndex-1]);
     }
 
-    void Update()
+    public void Reset()
     {
-        if (active)
-        {
-            timer += Time.deltaTime;
-            timerUI.text = UpdateTimerDisplay(timer);
-        }
-
-        if ((timer >= timeLimit && timeTrialMode) || timer >= 3600f)
-        {
-            gameObject.GetComponent<SceneLoader>().LoadScene(); //gameover
-        }
+        gameObject.GetComponent<TextMeshProUGUI>().text = "00:00:00";
     }
 
     private string UpdateTimerDisplay(float time)
@@ -47,5 +33,4 @@ public class TimeTrial : MonoBehaviour
         //firstMilli.text = currentTime[4].ToString();
         //secondMilli.text = currentTime[5].ToString();
     }
-
 }
