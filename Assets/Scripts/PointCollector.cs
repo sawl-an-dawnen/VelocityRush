@@ -34,10 +34,9 @@ public class PointCollector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        prompt.text = toCollect.transform.childCount + " left to collect!";
         if (toCollect.transform.childCount == 0)
         {
-            prompt.text = "All points collected!";
+            prompt.text = "ALL POINTS COLLECTED!";
             foreach (GameObject obj in toActive)
             {
                 obj.SetActive(true);
@@ -46,9 +45,15 @@ public class PointCollector : MonoBehaviour
             {
                 Destroy(obj);
             }
+            Destroy(this);
         }
         else {
-            prompt.text = toCollect.transform.childCount + " left to collect!";
+            if (toCollect.transform.childCount == 1) 
+            {
+                prompt.text = 1 + " POINT LEFT TO COLLECT!";
+                return;
+            }
+            prompt.text = toCollect.transform.childCount + " POINTS LEFT TO COLLECT!";
         }
     }
 }

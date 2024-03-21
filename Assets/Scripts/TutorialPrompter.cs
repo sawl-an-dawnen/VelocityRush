@@ -11,6 +11,8 @@ public class TutorialPrompter : MonoBehaviour
     public bool move, look, jump, handBreak, dash, gravityShift;
     public PromptID promptID;
 
+    public string message = "";
+
     public GameObject[] toActive; //once we've collected all the objs we active this array;
     public GameObject[] toDelete;
 
@@ -41,7 +43,6 @@ public class TutorialPrompter : MonoBehaviour
                 break;
         }
 
-        
 
         //ID numbers for the actions:
         //move: 0
@@ -89,32 +90,32 @@ public class TutorialPrompter : MonoBehaviour
             switch (prompts[0])
             {
                 case 0:
-                    prompt.text = "Use the left joystick or WASD to move.";
+                    prompt.text = "Use the left joystick or WASD to move.".ToUpper();
                     if (moveScript.move.magnitude != 0)
                         prompts.RemoveAt(0);
                     break;
                 case 1:
-                    prompt.text = "Use the right joystick or mouse to look around.";
+                    prompt.text = "Use the right joystick or mouse to look around.".ToUpper();
                     if (lookScript.freeCam.m_XAxis.m_InputAxisValue != 0f || lookScript.freeCam.m_YAxis.m_InputAxisValue != 0f)
                         prompts.RemoveAt(0);
                     break;
                 case 2:
-                    prompt.text = "Press the A button or Space to jump.";
+                    prompt.text = "Press the A button or Space to jump.".ToUpper();
                     if (jumpScript.pressed)
                         prompts.RemoveAt(0);
                     break;
                 case 3:
-                    prompt.text = "Press B or right click on the mouse to engage the break.";
+                    prompt.text = "Press B or right click on the mouse to engage the break.".ToUpper();
                     if (breakScript.pressed)
                         prompts.RemoveAt(0);
                     break;
                 case 4:
-                    prompt.text = "Pull the right trigger or left click on the mouse to dash.";
+                    prompt.text = "Pull the right trigger or left click on the mouse to dash.".ToUpper();
                     if (dashScript.pressed)
                         prompts.RemoveAt(0);
                     break;
                 case 5:
-                    prompt.text = "Press Y or E on the keyboard to invert gravity.";
+                    prompt.text = "Press Y or E on the keyboard to invert gravity.".ToUpper();
                     if (gravityScript.pressed)
                         prompts.RemoveAt(0);
                     break;
@@ -122,7 +123,15 @@ public class TutorialPrompter : MonoBehaviour
         }
         else 
         {
-            prompt.text = "Complete!";        
+            if (message != "")
+            {
+                prompt.text = message;
+            }
+            else 
+            {
+                prompt.text = "Complete!".ToUpper();
+            }
+            Destroy(this);
         }
     }
 }

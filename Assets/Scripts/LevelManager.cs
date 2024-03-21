@@ -34,6 +34,23 @@ public class LevelManager : MonoBehaviour
             gameMusic.Play();
         }
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!jump) {
+            player.DeactivateJump();
+        }
+        if (!dash)
+        {
+            player.DeactivateDash();
+        }
+        if (!gravityShift)
+        {
+            player.DeactivateGravityShift();
+        }
+
         if (prompted)
         {
             switch (promptID)
@@ -52,23 +69,6 @@ public class LevelManager : MonoBehaviour
                     break;
             }
             prompt.text = objective;
-        }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!jump) {
-            player.DeactivateJump();
-        }
-        if (!dash)
-        {
-            player.DeactivateDash();
-        }
-        if (!gravityShift)
-        {
-            player.DeactivateGravityShift();
         }
     }
 }

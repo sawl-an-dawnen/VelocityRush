@@ -27,10 +27,14 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pressed = false;
+
         if (timer > 0f)
         {
             timer -= Time.deltaTime;
+        }
+        else 
+        {
+            pressed = false;
         }
         //apply force to sphere
         if (Input.GetMouseButtonDown(0) && timer <= 0f && player.canDash)
