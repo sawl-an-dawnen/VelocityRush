@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     private Vector2 moveInputValue;
     private PlayerManager player;
     private AudioSource rollingSound;
+    private GameManager gameManager;
  
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour
         rigidBody.maxAngularVelocity = float.MaxValue;
         player = GetComponent<PlayerManager>();
         rollingSound = GetComponent<AudioSource>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         //collider = GetComponent<SphereCollider>();
     }
 
@@ -31,7 +33,7 @@ public class Movement : MonoBehaviour
     {
         if (player.isGrounded) 
         { 
-            rollingSound.volume = rigidBody.velocity.magnitude / 60f; 
+            rollingSound.volume = Mathf.Clamp(rigidBody.velocity.magnitude / 60f, 0f, gameManager.sfxVolume*0.01f); 
         }
         else 
         {

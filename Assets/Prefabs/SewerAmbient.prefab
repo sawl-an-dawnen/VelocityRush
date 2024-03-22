@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9038428990287490925}
   - component: {fileID: 3855699556582727140}
+  - component: {fileID: 6808536488056444428}
   m_Layer: 0
   m_Name: SewerAmbient
   m_TagString: Untagged
@@ -128,3 +129,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6808536488056444428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749674770016048715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eba2e87cc64f304fa62a70c7878e6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 15
