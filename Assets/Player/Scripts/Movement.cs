@@ -32,8 +32,19 @@ public class Movement : MonoBehaviour
     void Update()
     {
         if (player.isGrounded) 
-        { 
-            rollingSound.volume = Mathf.Clamp(rigidBody.velocity.magnitude / 60f, 0f, gameManager.sfxVolume*0.01f); 
+        {
+            try
+            {
+                rollingSound.volume = Mathf.Clamp(rigidBody.velocity.magnitude / 60f, 0f, gameManager.sfxVolume * 0.01f);
+            }
+            catch 
+            {
+                Debug.Log("No GameManager");
+                rollingSound.volume = Mathf.Clamp(rigidBody.velocity.magnitude / 60f, 0f, 1f);
+
+            }
+
+
         }
         else 
         {
