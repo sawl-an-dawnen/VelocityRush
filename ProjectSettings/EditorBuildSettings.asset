@@ -42,21 +42,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Sewers/SewerLevel10.02.unity
     guid: c416dbef5fb622448ac4b916a81515e2
   - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel11.02.unity
-    guid: ef69960be9d23fc4d895426a961ff015
-  - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel12.unity
-    guid: 13a077b589a8eb7459e8e1bdf7c88fbd
-  - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel13.unity
-    guid: 6205fd18c7a135e439d914abe82ab035
-  - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel14.unity
-    guid: 43bff7076a516664f84bfae049add987
-  - enabled: 1
-    path: Assets/Scenes/Sewers/SewerLevel15.unity
-    guid: 294d19ebdb375424084a70839fb82172
-  - enabled: 1
     path: Assets/Scenes/City/CityLevel_01.unity
     guid: 7af74e4628d3ff84d944138180c5a973
   - enabled: 1
@@ -69,8 +54,23 @@ EditorBuildSettings:
     path: Assets/Scenes/City/CityLevel_04.unity
     guid: 9ca7a1ade3e9ee64ab8ac1f187cca983
   - enabled: 1
+    path: Assets/Scenes/City/CityLevel_05.unity
+    guid: 75d91f41f3734f949addaab859a6e601
+  - enabled: 1
     path: Assets/Scenes/City/CityLevel_06.unity
     guid: c6a20c27b45a2e6429d57ade2730770b
+  - enabled: 1
+    path: Assets/Scenes/City/CityLevel_07.unity
+    guid: dd1050a225f2d7b4c94bb8b3c58c1ca3
+  - enabled: 1
+    path: Assets/Scenes/City/CityLevel_08.unity
+    guid: c0dc020fbedbc6748918cfb46ba6cb6a
+  - enabled: 1
+    path: Assets/Scenes/City/CityLevel_09.unity
+    guid: 345dc6875daf2594ea047d28eba20acf
+  - enabled: 1
+    path: Assets/Scenes/City/CityLevel_10.unity
+    guid: c8a4fa6dbc0f49043a6590cb9ce1b975
   - enabled: 1
     path: Assets/Scenes/ThankYouPage.unity
     guid: cd336a8afb90f7d4bafb3e06104ef071

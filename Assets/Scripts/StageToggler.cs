@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StageToggler : MonoBehaviour
 {
     public GameObject[] sewerLevels;
     public GameObject[] cityLevels;
+    public GameObject[] skyLevels;
 
-    bool sewerActive = true;
-    bool cityActive = false;
-    bool skyActive = false;
+    private int index = 0;
 
     public void ToggleSelector() {
-        if (sewerActive)
+        if (index == 0)
         {
             foreach (GameObject obj in sewerLevels)
             {
@@ -22,11 +22,22 @@ public class StageToggler : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-            cityActive = true;
-            sewerActive = false;
+            index++;
         }
-        else {
+        else if (index == 1) {
             foreach (GameObject obj in cityLevels)
+            {
+                obj.SetActive(false);
+            }
+            foreach (GameObject obj in skyLevels)
+            {
+                obj.SetActive(true);
+            }
+            index++;
+        }
+        else if (index == 2)
+        {
+            foreach (GameObject obj in skyLevels)
             {
                 obj.SetActive(false);
             }
@@ -34,8 +45,7 @@ public class StageToggler : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-            cityActive = false;
-            sewerActive = true;
+            index = 0;
         }
     }
 }

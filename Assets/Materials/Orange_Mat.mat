@@ -79,9 +79,9 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _HighIntensity: 3.77
+    - _HighIntensity: 4.07
     - _LightScalar: 1
-    - _LowIntensity: 0.5
+    - _LowIntensity: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -89,8 +89,8 @@ Material:
     - _Parallax: 0.02
     - _RampLevels: 2
     - _RimAlpha: 1
-    - _RimDropOff: 0
-    - _RimPower: 0.495
+    - _RimDropOff: 1
+    - _RimPower: 0.492
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -101,7 +101,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighColor: {r: 1, g: 0.36980972, b: 0.08823532, a: 1}
-    - _LowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LowColor: {r: 0.70980394, g: 0.18431373, b: 0.7411765, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.709, g: 0.184, b: 0.741, a: 1}
   m_BuildTextureStacks: []
