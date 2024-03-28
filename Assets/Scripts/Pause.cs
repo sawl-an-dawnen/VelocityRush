@@ -14,8 +14,8 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        mainMusicSource = GameObject.FindGameObjectWithTag("GameMusic").GetComponent<AudioSource>();
+            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            mainMusicSource = GameObject.FindGameObjectWithTag("GameMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

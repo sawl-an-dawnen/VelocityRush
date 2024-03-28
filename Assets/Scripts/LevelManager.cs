@@ -25,15 +25,15 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
-        gameMusic = GameObject.FindGameObjectWithTag("GameMusic").GetComponent<AudioSource>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+            gameMusic = GameObject.FindGameObjectWithTag("GameMusic").GetComponent<AudioSource>();
 
-        if (levelMusic != null && gameMusic.clip != levelMusic) {
-            gameMusic.Stop();
-            gameMusic.clip = levelMusic;
-            gameMusic.Play();
-        }
-
+            if (levelMusic != null && gameMusic.clip != levelMusic)
+            {
+                gameMusic.Stop();
+                gameMusic.clip = levelMusic;
+                gameMusic.Play();
+            }
     }
 
     // Update is called once per frame

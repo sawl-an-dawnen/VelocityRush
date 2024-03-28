@@ -13,7 +13,6 @@ public class sfxAudioSetting : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         audioSource = gameObject.GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
