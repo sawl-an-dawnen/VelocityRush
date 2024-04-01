@@ -4,18 +4,29 @@ using UnityEngine;
 public class TimeTrial : MonoBehaviour
 {
     public bool timeTrialMode = false;
+    public bool survivalMode = false;
+    public string nextLevel;
     [HideInInspector]
     public bool active = true;
     public float timeLimit;
+    public AudioClip victorySound;
     [HideInInspector]
     public float timer = 0f;
     private TextMeshProUGUI timerUI;
+    private GameManager gameManager;
+    private LevelManager levelManager;
+    private float pause = 2f;
+    private bool levelComplete = false;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         timerUI = GameObject.FindGameObjectWithTag("Timer").GetComponent<TextMeshProUGUI>();
         //Debug.Log(UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset.GetType().Name);
+        audioSource = GameObject.FindGameObjectWithTag("SFX-2").GetComponent<AudioSource>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
 
     void Update()
@@ -29,6 +40,21 @@ public class TimeTrial : MonoBehaviour
         if ((timer >= timeLimit && timeTrialMode) || timer >= 3600f)
         {
             gameObject.GetComponent<SceneLoader>().LoadScene(); //gameover
+        }
+        if ((timer >= timeLimit && survivalMode))
+        {
+            Debug.Log("COMPLETE");
+            gameManager.CompleteLevel(levelManager.levelIndex - 1, timer);
+            levelComplete = true;
+        }
+        if (levelComplete)
+        {
+            audioSource.PlayOneShot(victorySound);
+            pause -= Time.deltaTime;
+            if (pause <= 0)
+            {
+                gameObject.GetComponent<SceneLoader>().LoadScene(nextLevel);
+            }
         }
     }
 

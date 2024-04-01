@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public float xSens, ySens, musicVolume, sfxVolume;
+
+    public bool xInvert, yInvert = false;
+    public UnityEngine.UI.Toggle xAxisToggle, yAxisToggle;
 
     // Start is called before the first frame update
     void Awake()
@@ -43,6 +47,19 @@ public class GameManager : MonoBehaviour
             musicVolume = data.musicVolume;
             mainMusicSource.volume = musicVolume * .01f;
             sfxVolume = data.sfxVolume;
+        }
+        else
+        {
+            for (int i = 0; i < levels.Length; i++)
+            {
+                levels[i] = false;
+                records[i] = 0f;
+            }
+            xSens = 50f;
+            ySens = 50f;
+            musicVolume = 50f;
+            mainMusicSource.volume = 50f * .01f;
+            sfxVolume = 50f;
         }
     }
 
@@ -110,12 +127,17 @@ public class GameManager : MonoBehaviour
     {
         musicVolume = s.value;
         Debug.Log(musicVolume);
-        mainMusicSource.volume = musicVolume*.01f;
+        mainMusicSource.volume = musicVolume * .01f;
     }
 
     public void updateSFXVolume(UnityEngine.UI.Slider s)
     {
         sfxVolume = s.value;
         Debug.Log(sfxVolume);
+    }
+
+    public void updateInverSettings() {
+        xInvert = xAxisToggle.isOn;
+        yInvert = yAxisToggle.isOn;
     }
 }

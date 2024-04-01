@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -11,7 +12,14 @@ public class PlayerManager : MonoBehaviour
     public bool canShiftGravity = true;
     public bool debugMode = false;
 
+    public bool healthGauge = false;
+    public float health = 100f;
+    public float damage = 5f;
+    private bool damageInflicted = false;
+
+
     public TextMeshProUGUI livesUI;
+    public TextMeshProUGUI healthUI;
 
     private int lives = 3;
     private int points = 0;
@@ -23,6 +31,10 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        if (healthGauge) {
+            livesUI.enabled = false;
+            healthUI.enabled = true;
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -33,14 +45,25 @@ public class PlayerManager : MonoBehaviour
             //Debug.Log("GROUNDED");
             isGrounded = true;
         }
+
+        if (collision.collider.name == "Enemy")
+        {
+            damageInflicted = true;
+        }
     }
     private void OnCollisionExit(Collision collision)
     {
-        //Debug.Log(collision.collider.name);
+
+        Debug.Log(collision.collider.name);
         if (collision.collider.tag == "Ground")
         {
             //Debug.Log("NOT GROUNDED");
             isGrounded = false;
+        }
+
+        if (collision.collider.name == "Enemy")
+        {
+            damageInflicted = false;
         }
     }
 
@@ -48,15 +71,22 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         livesUI.text = "LIVES: " + lives;
+        healthUI.text = "HEALTH: " + Mathf.Round(health);
 
         //Debug.Log(maxVelocity);
         if (rigidBody.velocity.magnitude > maxVelocity) {
             maxVelocity = rigidBody.velocity.magnitude;
         }
 
-        if (lives <= 0) {
+        if (lives <= 0 || health <= 0) {
             Debug.Log("Game Over");
             gameObject.GetComponent<SceneLoader>().LoadScene();
+        }
+
+        if (damageInflicted) 
+        {
+            health -= Time.deltaTime *damage;
+            Debug.Log(health);
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using Unity.VisualScripting;
 
 public class Look : MonoBehaviour
 {
@@ -32,19 +33,37 @@ public class Look : MonoBehaviour
         defaultXSense = freeCam.m_XAxis.m_MaxSpeed;
         defaultYSense = freeCam.m_YAxis.m_MaxSpeed;
 
-        try
-        {
-            freeCam.m_XAxis.m_MaxSpeed = 2f * defaultXSense * gameManager.xSens * .01f;
-            freeCam.m_YAxis.m_MaxSpeed = 2f * defaultYSense * gameManager.ySens * .01f;
-        }
-        catch { }
-
         //Debug.Log(freeCam.m_XAxis.m_MaxSpeed);
         //Debug.Log(freeCam.m_YAxis.m_MaxSpeed);
     }
 
     private void Update()
     {
+
+        if (gameManager.xInvert)
+        {
+            freeCam.m_XAxis.m_InvertInput = true;
+        }
+        else {
+            freeCam.m_XAxis.m_InvertInput = false;
+        }
+
+        if (gameManager.yInvert)
+        {
+            freeCam.m_YAxis.m_InvertInput = false;
+        }
+        else
+        {
+            freeCam.m_YAxis.m_InvertInput = true;
+        }
+
+        try
+        {
+            freeCam.m_XAxis.m_MaxSpeed = 3f * defaultXSense * gameManager.xSens * .01f;
+            freeCam.m_YAxis.m_MaxSpeed = 3f * defaultYSense * gameManager.ySens * .01f;
+        }
+        catch { }
+
         //camera.m_Lens.FieldOfView = defaultPOV + (rigidBody.velocity.magnitude * speedWarpModifier);
         freeCam.m_Lens.FieldOfView = Mathf.Lerp(defaultPOV, defaultPOV * speedWarpModifier, Mathf.InverseLerp(5f, 100f, rigidBody.velocity.magnitude));
 

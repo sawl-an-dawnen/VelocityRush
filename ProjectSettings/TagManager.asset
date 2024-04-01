@@ -18,6 +18,8 @@ TagManager:
   - Prompt02
   - Lives
   - Timer
+  - Enemy
+  - Health
   layers:
   - Default
   - TransparentFX
